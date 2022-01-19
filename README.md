@@ -4,7 +4,7 @@
 
 ### Docker Image
 
-`docker build -t <image-name> .`
+`docker build -t <image-name> .` <!--<.> is for current directory-->
 
 ### Docker Container
 
@@ -20,7 +20,10 @@ Run docker container \
 *example using CMD:* \
 `docker run -v %cd%\src:/app/src -d -p 3000:3000 --name <container-name> <image-name>` \
 *example using Windows Environment:* \
-`docker run -v %cd%\src:/app/src -e CHOKIDAR_USEPOLLING=true -d -p 3000:3000 --name <container-name> <image-name>` \
+- `docker run -v %cd%\src:/app/src -e CHOKIDAR_USEPOLLING=true -d -p 3000:3000 --name <container-name> <image-name>` \
+
+- `docker run -v %cd%\src:/app/src -e CHOKIDAR_USEPOLLING=true -e REACT_APP_NAME=reactApp1 -d -p 3000:3000 --name <container-name> <image-name>` \
+
 *example using Linux:* \
 `docker run -v $(pwd)/src:/app/src -d -p 3000:3000 --name <container-name> <image-name>` \
 
