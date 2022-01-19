@@ -24,6 +24,8 @@ Run docker container \
 
 - `docker run -v %cd%\src:/app/src -e CHOKIDAR_USEPOLLING=true -e REACT_APP_NAME=reactApp1 -d -p 3000:3000 --name <container-name> <image-name>` \
 
+- Using an env file: `docker run -v %cd%\src:/app/src -env-file ./.env -d -p 3000:3000 --name <container-name> <image-name>` \
+
 *example using Linux:* \
 `docker run -v $(pwd)/src:/app/src -d -p 3000:3000 --name <container-name> <image-name>` \
 
